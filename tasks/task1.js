@@ -2,7 +2,16 @@
 // на певний символ, наприклад *.
 
 function replaceVowels(str) {
-  // Ваш код тут
+  function replaceVowels(str) {
+    // Використовуємо метод replace з регулярним виразом для заміни голосних
+    return str.replace(/[aeiou]/gi, '*');
+  }
+  
+  // Перевірка функції
+  console.log(replaceVowels("hello world")); // Виведе: "h*ll* w*rld"
+  console.log(replaceVowels("Javascript"));  // Виведе: "J*v*scr*pt"
+  
+  module.exports = replaceVowels;
 }
 
 console.log(replaceVowels("hello world")); // Виведе: "h*ll* w*rld"
